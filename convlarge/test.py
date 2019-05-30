@@ -4,7 +4,7 @@ import numpy
 import tensorflow as tf
 
 import layers as L
-import vat
+import cnn
 
 FLAGS = tf.app.flags.FLAGS
 
@@ -22,16 +22,33 @@ tf.app.flags.DEFINE_integer('eval_batch_size', 500, "the number of examples in a
 
 from svhn import inputs, unlabeled_inputs
 
+def logit(x, is_training=True, update_batch_stats=True, stochastic=True, seed=1234):
+    return cnn.logit(x, is_training=is_training,
+                     update_batch_stats=update_batch_stats,
+                     stochastic=stochastic,
+                     seed=seed)[0]
+
+
+def forward(x, is_training=True, update_batch_stats=True, seed=1234):
+    if is_training:
+        return logit(x, is_training=True,
+                     update_batch_stats=update_batch_stats,
+                     stochastic=True, seed=seed)
+    else:
+        return logit(x, is_training=False,
+                     update_batch_stats=update_batch_stats,
+                     stochastic=False, seed=seed)
+
 
 def build_finetune_graph(x):
-    logit = vat.forward(x, is_training=True, update_batch_stats=True)
+    logit = forward(x, is_training=True, update_batch_stats=True)
     with tf.control_dependencies([logit]):
         finetune_op = tf.no_op()
     return finetune_op
 
 
 def build_eval_graph(x, y):
-    logit = vat.forward(x, is_training=False, update_batch_stats=False)
+    logit = forward(x, is_training=False, update_batch_stats=False)
     n_corrects = tf.cast(tf.equal(tf.argmax(logit, 1), tf.argmax(y,1)), tf.int32)
     return tf.reduce_sum(n_corrects), tf.shape(n_corrects)[0] 
 
