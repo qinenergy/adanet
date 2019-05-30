@@ -39,7 +39,7 @@ python3 ./adanet-resnet.py --data <path_to_your_imagenet_files> -d 18  --mode re
 ```
 
 ### Acknowledgement
-+ ConvLarge code is based on Takeru Miyato's tf implementation of [VAT](https://github.com/takerum/vat_tf). 
++ ConvLarge code is based on Takeru Miyato's [tf implementation](https://github.com/takerum/vat_tf). 
 + ResNet code is based on [Tensorpack](https://github.com/tensorpack/tensorpack/tree/master/examples/ResNet)'s supervised imagenet training scripts.
 
 ### License
