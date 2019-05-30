@@ -1,11 +1,14 @@
 # ADA-Net
-Tensorflow implementation for the paper [Semi-Supervised Learning by Augmented Distribution Alignment](https://arxiv.org/abs/1905.08171)
+Tensorflow implementation for our paper 
+[Semi-Supervised Learning by Augmented Distribution Alignment](https://arxiv.org/abs/1905.08171)  Qin Wang, Wen Li, Luc Van Gool
 
 
 
 
 ## Requirements
-tensorflow-gpu(Tested on 1.10.0 and 1.13.1), scipy 0.19.0(for ZCA whitening required by the original ConvLarge Implementation in VAT), Tensorpack (for ImageNet experiments)
+tensorflow-gpu (Tested on 1.10.0 and 1.13.1)
+scipy 0.19.0 (for ZCA whitening required by the original ConvLarge Implementation in VAT)
+tensorpack (for ImageNet experiments)
 
 ### Preparation for ConvLarge Experiments
 
@@ -20,7 +23,7 @@ python3 svhn.py --data_dir=./dataset/svhn/
 CUDA_VISIBLE_DEVICES=0 python3 train_svhn.py --dataset=svhn --data_dir=./dataset/svhn/ --log_dir=./log/svhnaug/ --num_epochs=120 --epoch_decay_start=80 --aug_trans=True
 ```
 
-## Evaluation of the trained model
+### Evaluation of the trained model
 
 ```
 CUDA_VISIBLE_DEVICES=0 python test.py --dataset=svhn --data_dir=./dataset/svhn/ --log_dir=<path_to_log_dir>
@@ -30,10 +33,9 @@ CUDA_VISIBLE_DEVICES=0 python test.py --dataset=svhn --data_dir=./dataset/svhn/ 
 python3 ./adanet-resnet.py --data <path_to_your_imagenet_files> -d 18  --mode resnet --batch 256 --gpu 0,1,2,3
 
 
-
 ## Acknowledgement
-ConvLarge code is based on Takeru Miyato's tf implementation of VAT. 
-ResNet code is based on Tensorpack's supervised imagenet training scripts.
+ConvLarge code is based on Takeru Miyato's tf implementation of [VAT](https://github.com/takerum/vat_tf). 
+ResNet code is based on [Tensorpack](https://github.com/tensorpack/tensorpack/tree/master/examples/ResNet)'s supervised imagenet training scripts.
 
 ## License
 MIT
