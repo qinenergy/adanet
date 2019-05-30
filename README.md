@@ -30,7 +30,7 @@ CUDA_VISIBLE_DEVICES=0 python3 train_svhn.py --dataset=svhn --data_dir=./dataset
 CUDA_VISIBLE_DEVICES=0 python test.py --dataset=svhn --data_dir=./dataset/svhn/ --log_dir=<path_to_log_dir>
 ```
 
-### Train and Eval ADA-Net on ImageNet
+### Train and Eval ADA-Net on ImageNet ResNet
 Download our imagenet labeled/unlabeled split from [this link](https://drive.google.com/open?id=1ZeG4Qr1z65Fwj9m8uffUWG1aymX14HZ3), put them in ./resnet
 
 ```
