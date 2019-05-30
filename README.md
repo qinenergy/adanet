@@ -1,7 +1,7 @@
 # ADA-Net
 Tensorflow implementation
 
-[Semi-Supervised Learning by Augmented Distribution Alignment](https://arxiv.org/abs/1905.08171)  Qin Wang, Wen Li, Luc Van Gool
+[Semi-Supervised Learning by Augmented Distribution Alignment](https://arxiv.org/abs/1905.08171)  Qin Wang, Wen Li, Luc Van Gool (2019 Under reivew)
 
 
 
@@ -44,3 +44,13 @@ python3 ./adanet-resnet.py --data <path_to_your_imagenet_files> -d 18  --mode re
 
 ### License
 MIT
+
+### Citing this work
+```
+@article{wang2019semi,
+  title={Semi-Supervised Learning by Augmented Distribution Alignment},
+  author={Wang, Qin and Li, Wen and Van Gool, Luc},
+  journal={arXiv preprint arXiv:1905.08171},
+  year={2019}
+}
+```
