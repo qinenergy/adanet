@@ -8,7 +8,7 @@ Tensorflow implementation for our paper
 
 ### Requirements
 + tensorflow-gpu (Tested on 1.10.0 and 1.13.1)
-+ scipy 0.19.0 (for ZCA whitening required by the original ConvLarge Implementation in VAT)
++ scipy 0.19.0 
 + tensorpack (for ImageNet experiments)
 
 ###  Train and Eval ADA-Net on ConvLarge
