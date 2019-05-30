@@ -1,5 +1,5 @@
 # ADA-Net
-Tensorflow implementation for our paper 
+Tensorflow implementation
 
 [Semi-Supervised Learning by Augmented Distribution Alignment](https://arxiv.org/abs/1905.08171)  Qin Wang, Wen Li, Luc Van Gool
 
