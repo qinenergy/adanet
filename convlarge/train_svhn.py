@@ -16,6 +16,7 @@ tf.app.flags.DEFINE_string('dataset', 'cifar10', "{cifar10, svhn}")
 tf.app.flags.DEFINE_string('log_dir', "", "log_dir")
 tf.app.flags.DEFINE_integer('seed', 1, "initial random seed")
 tf.app.flags.DEFINE_bool('validation', False, "")
+tf.app.flags.DEFINE_bool('one_hot', False, "")
 tf.app.flags.DEFINE_integer('batch_size', 128, "the number of examples in a batch")
 tf.app.flags.DEFINE_integer('ul_batch_size', 128, "the number of unlabeled examples in a batch")
 tf.app.flags.DEFINE_integer('eval_batch_size', 100, "the number of eval examples in a batch")
@@ -63,7 +64,10 @@ def build_training_graph(x1, y1, x2, lr, mom):
     
     # Interpolation 
     y2_logit, _ = cnn.logit(x2, is_training=False, update_batch_stats=False, stochastic=False)
-    y2 = tf.stop_gradient(tf.nn.softmax(y2_logit))
+    if FLAGS.one_hot:
+        y2 = tf.stop_gradient(tf.cast(tf.one_hot(tf.argmax(y2_logit, -1), 10), tf.float32))
+    else:
+        y2 = tf.stop_gradient(tf.nn.softmax(y2_logit))
 
     dist_beta = tf.distributions.Beta(0.1, 0.1)
     lmb = dist_beta.sample(tf.shape(x1)[0])
