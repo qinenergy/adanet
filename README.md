@@ -16,6 +16,7 @@ Tensorflow implementation
 ```
 cd convlarge
 python3 svhn.py --data_dir=./dataset/svhn/
+python3 cifar10.py --data_dir=./dataset/cifar10/
 ```
 
 #### Train and Eval ADA-Net on SVHN ConvLarge
