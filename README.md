@@ -18,16 +18,17 @@ cd convlarge
 python3 svhn.py --data_dir=./dataset/svhn/
 ```
 
-#### Training with ADA-Net on SVHN
+#### Train and Eval ADA-Net on SVHN ConvLarge
 
 ```
 CUDA_VISIBLE_DEVICES=0 python3 train_svhn.py --dataset=svhn --data_dir=./dataset/svhn/ --log_dir=./log/svhnaug/ --num_epochs=120 --epoch_decay_start=80 --aug_trans=True
+CUDA_VISIBLE_DEVICES=0 python3 test_svhn.py --dataset=svhn --data_dir=./dataset/svhn/ --log_dir=<path_to_log_dir>
 ```
-
-#### Evaluation of the trained model
+#### Train and Eval ADA-Net on Cifar10 ConvLarge
 
 ```
-CUDA_VISIBLE_DEVICES=0 python test.py --dataset=svhn --data_dir=./dataset/svhn/ --log_dir=<path_to_log_dir>
+CUDA_VISIBLE_DEVICES=0 python3  train_cifar.py --dataset=cifar10 --data_dir=./dataset/cifar10/ --log_dir=./log/cifar10aug/ --num_epochs=1000 --epoch_decay_start=460 --aug_flip=True --aug_trans=True
+CUDA_VISIBLE_DEVICES=0 python3 test_cifar.py --dataset=cifar10 --data_dir=./dataset/cifar10/ --log_dir=<path_to_log_dir>
 ```
 
 ### Train and Eval ADA-Net on ImageNet ResNet
