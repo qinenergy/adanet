@@ -20,7 +20,7 @@ tf.app.flags.DEFINE_integer('finetune_iter', 1000, "the number of iteration for 
 tf.app.flags.DEFINE_integer('eval_batch_size', 500, "the number of examples in a batch")
 
 
-from svhn import inputs, unlabeled_inputs
+from cifar10 import inputs, unlabeled_inputs
 
 def logit(x, is_training=True, update_batch_stats=True, stochastic=True, seed=1234):
     return cnn.logit(x, is_training=is_training,
