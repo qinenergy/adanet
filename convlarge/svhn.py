@@ -21,7 +21,7 @@ DATA_URL_TRAIN = 'http://ufldl.stanford.edu/housenumbers/train_32x32.mat'
 DATA_URL_TEST = 'http://ufldl.stanford.edu/housenumbers/test_32x32.mat'
 
 FLAGS = tf.app.flags.FLAGS
-tf.app.flags.DEFINE_string('data_dir', '/tmp/svhn', "")
+tf.app.flags.DEFINE_string('data_dir', './dataset/svhn', "")
 tf.app.flags.DEFINE_integer('num_labeled_examples', 1000, "The number of labeled examples")
 tf.app.flags.DEFINE_integer('num_valid_examples', 1000, "The number of validation examples")
 tf.app.flags.DEFINE_integer('dataset_seed', 1, "dataset seed")

@@ -16,7 +16,7 @@ tf.app.flags.DEFINE_string('log_dir', "", "log_dir")
 tf.app.flags.DEFINE_bool('validation', False, "")
 
 tf.app.flags.DEFINE_integer('finetune_batch_size', 100, "the number of examples in a batch")
-tf.app.flags.DEFINE_integer('finetune_iter', 100, "the number of iteration for finetuning of BN stats")
+tf.app.flags.DEFINE_integer('finetune_iter', 1000, "the number of iteration for finetuning of BN stats")
 tf.app.flags.DEFINE_integer('eval_batch_size', 500, "the number of examples in a batch")
 
 
