@@ -8,9 +8,13 @@ Tensorflow implementation
 
 ### Requirements
 + tensorflow-gpu (Tested on 1.10.0 and 1.13.1)
-+ scipy 
++ scipy 0.19.0
 + tensorpack (for ImageNet experiments)
-
+```
+pip3 install tensorflow-gpu==1.13.1
+pip3 install scipy==0.19.0
+pip3 install tensorpack==0.9.1
+```
 ###  Train and Eval ADA-Net on ConvLarge
 #### Prepare dataset
 ```
