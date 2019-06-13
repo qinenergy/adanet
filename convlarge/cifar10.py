@@ -94,11 +94,13 @@ def load_cifar10():
     test_images = (test_images - 127.5) / 255.
     test_labels = np.asarray(test['labels'], dtype=np.int64)
 
+    """
     print("Apply ZCA whitening")
     components, mean, train_images = ZCA(train_images)
     np.save('{}/components'.format(FLAGS.data_dir), components)
     np.save('{}/mean'.format(FLAGS.data_dir), mean)
     test_images = np.dot(test_images - mean, components.T)
+    """
 
     train_images = train_images.reshape(
         (NUM_EXAMPLES_TRAIN, 3, 32, 32)).transpose((0, 2, 3, 1)).reshape((NUM_EXAMPLES_TRAIN, -1))
