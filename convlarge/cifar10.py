@@ -31,7 +31,7 @@ from six.moves import urllib
 
 import tensorflow as tf
 
-from dataset_utils import *
+from dataset_utils_cifar import *
 
 DATA_URL = 'http://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz'
 
