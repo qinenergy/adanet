@@ -3,7 +3,7 @@ Tensorflow implementation
 
 [Semi-Supervised Learning by Augmented Distribution Alignment](https://arxiv.org/abs/1905.08171)  Qin Wang, Wen Li, Luc Van Gool (2019 Under reivew)
 
-
+![](adanet.png)
 
 
 ### Requirements
@@ -60,3 +60,6 @@ MIT
   year={2019}
 }
 ```
+
+### Reproduce Figure 4
+To reproduce Figure 4 in the paper, we provide the plot script and extracted features [here](https://drive.google.com/uc?id=1td_uhDqza9trwOd2kdWNdQD85IfNFb8h&export=download). Notice that we use sklearn==0.20.1 for TSNE calculation.  
