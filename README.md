@@ -26,11 +26,14 @@ CUDA_VISIBLE_DEVICES=0 python3 train_cifar.py --dataset=cifar10 --data_dir=./dat
 CUDA_VISIBLE_DEVICES=0 python3 test_cifar.py --dataset=cifar10 --data_dir=./dataset/cifar10/ --log_dir=<path_to_log_dir> --dataset_seed=1
 ```
 
-Here are the error rates we get using the above scripts:
+Here are the error rates we get using the above scripts :
 
-| Seed 1 | Seed 2 | Seed 3 |
-| -------- | -------- | -------- |
-| 8.61%     | 8.89%     | 8.65%     |
+| Data Split Seed 1 | Seed 2 | Seed 3 | Reported 
+| -------- | -------- | -------- |-------- |
+| 8.61%     | 8.89%     | 8.65%     | 8.72+-0.12%
+
+We will soon update our paper. The additional improvement was achieved by removing ZCA whitening, and make translation range 4 instead of 2. 
+
 
 ### Train and Eval ADA-Net on ImageNet ResNet
 Download our imagenet labeled/unlabeled split from [this link](https://drive.google.com/open?id=1ZeG4Qr1z65Fwj9m8uffUWG1aymX14HZ3), put them in ./resnet
