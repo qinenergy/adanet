@@ -32,7 +32,6 @@ Here are the error rates we get using the above scripts :
 | -------- | -------- | -------- |-------- |
 | 8.61%     | 8.89%     | 8.65%     | 8.72+-0.12%
 
-We will soon update our paper. The additional improvement was achieved by removing ZCA whitening, and make translation range 4 instead of 2. 
 
 
 ### Train and Eval ADA-Net on ImageNet ResNet
