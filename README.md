@@ -10,7 +10,7 @@ Tensorflow implementation
 ```
 pip3 install tensorflow-gpu==1.13.1
 pip3 install tensorpack==0.9.1
-pip3 install scipy
+pip3 install scipy==1.2.1
 ```
 ###  Train and Eval ADA-Net on ConvLarge
 #### Prepare dataset
