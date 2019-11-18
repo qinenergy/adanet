@@ -35,7 +35,7 @@ Here are the error rates we get using the above scripts :
 
 
 ### Train and Eval ADA-Net on ImageNet ResNet
-Download our imagenet labeled/unlabeled split from [this link](https://drive.google.com/open?id=1ZeG4Qr1z65Fwj9m8uffUWG1aymX14HZ3), put them in ./resnet
+Download our imagenet labeled/unlabeled split from [this link](https://github.com/qinenergy/adanet/releases/download/0.1/imagenet_split.zip), put them in ./resnet
 
 ```
 cd resnet
@@ -61,4 +61,4 @@ MIT
 ```
 
 ### Reproduce Figure 4
-To reproduce Figure 4 in the paper, we provide the plot script and extracted features [here](https://drive.google.com/uc?id=1td_uhDqza9trwOd2kdWNdQD85IfNFb8h&export=download). Notice that we use sklearn==0.20.1 for TSNE calculation.  
+To reproduce Figure 4 in the paper, we provide the plot script and extracted features [here](https://github.com/qinenergy/adanet/releases/download/0.1/Figure4-reproduce.zip). Notice that we use sklearn==0.20.1 for TSNE calculation.  
