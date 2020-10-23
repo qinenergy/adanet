@@ -3,8 +3,8 @@ Tensorflow implementation
 
 [Semi-Supervised Learning by Augmented Distribution Alignment](https://arxiv.org/abs/1905.08171)  Qin Wang, Wen Li, Luc Van Gool (ICCV 2019 Oral)
 
-[Thesis: Distribution Aligned Semi-Supervised Learning](https://www.qin.ee/QinThesis.pdf)
-![](adanet.png) 2018 August at ETH Zurich
+[Thesis: Distribution Aligned Semi-Supervised Learning](https://www.qin.ee/QinThesis.pdf) 2018 August at ETH Zurich
+![](adanet.png) 
 
 
 ### Requirements
