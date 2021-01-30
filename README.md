@@ -17,14 +17,14 @@ pip3 install scipy==1.2.1
 #### Prepare dataset
 ```
 cd convlarge
-python3 cifar10.py --data_dir=./dataset/cifar10/ --dataset_seed=1
+python3 cifar10.py --data_dir=./dataset/cifar10/ --dataset_seed=2
 ```
 
 #### Train and Eval ADA-Net on Cifar10 ConvLarge
 
 ```
-CUDA_VISIBLE_DEVICES=0 python3 train_cifar.py --dataset=cifar10 --data_dir=./dataset/cifar10/ --log_dir=./log/cifar10aug/ --num_epochs=2000 --epoch_decay_start=1500 --aug_flip=True --aug_trans=True --dataset_seed=1
-CUDA_VISIBLE_DEVICES=0 python3 test_cifar.py --dataset=cifar10 --data_dir=./dataset/cifar10/ --log_dir=<path_to_log_dir> --dataset_seed=1
+CUDA_VISIBLE_DEVICES=0 python3 train_cifar.py --dataset=cifar10 --data_dir=./dataset/cifar10/ --log_dir=./log/cifar10aug/ --num_epochs=2000 --epoch_decay_start=1500 --aug_flip=True --aug_trans=True --dataset_seed=2
+CUDA_VISIBLE_DEVICES=0 python3 test_cifar.py --dataset=cifar10 --data_dir=./dataset/cifar10/ --log_dir=<path_to_log_dir> --dataset_seed=2
 ```
 
 Here are the error rates we get using the above scripts :
