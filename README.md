@@ -33,6 +33,7 @@ Here are the error rates we get using the above scripts :
 | -------- | -------- | -------- |-------- |
 | 8.61%     | 8.89%     | 8.65%     | 8.72+-0.12%
 
+The dataset split seed controls the split between labeled and unlabeled samples. It does not affect the test set.
 
 
 ### Train and Eval ADA-Net on ImageNet ResNet
